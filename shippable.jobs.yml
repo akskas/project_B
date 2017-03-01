@@ -1,0 +1,13 @@
+jobs:  
+  - name: nginx-manifest
+    type: manifest
+    steps:
+      - IN: nginx-image
+      - IN: trigger
+
+  - name: ddc-deploy
+    type: deploy
+    steps:
+      - IN: nginx-manifest
+      - IN: ddc-cluster
+      - TASK: managed
