@@ -1,0 +1,5 @@
+triggers:
+   - name: trigger
+     type: trigger
+     version:
+       counter: 1
